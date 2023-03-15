@@ -1,3 +1,4 @@
+import 'package:app_auth/screens/login_screen.dart';
 import 'package:app_auth/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -68,28 +69,38 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              FittedBox(
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 26, vertical: 16),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(26),
-                    color: kPrimaryColor,
-                  ),
-                  child: Row(
-                    children: [
-                      Text(
-                        "Start Learning",
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ),
+                  );
+                },
+                child: FittedBox(
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 26, vertical: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(26),
+                      color: kPrimaryColor,
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Start Learning",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Icon(Icons.arrow_forward),
-                    ],
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(Icons.arrow_forward),
+                      ],
+                    ),
                   ),
                 ),
               )
