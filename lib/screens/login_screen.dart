@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: Column(
                 children: [
                   Row(
@@ -47,6 +47,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 30),
                     child: Row(
@@ -84,51 +85,55 @@ class LoginScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 30),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withOpacity(.5),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.android,
                             color: Colors.white.withOpacity(.5),
                           ),
                         ),
-                        child: Icon(
-                          Icons.android,
-                          color: Colors.white.withOpacity(.5),
+                        const SizedBox(
+                          width: 16,
                         ),
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withOpacity(.5),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.chat,
                             color: Colors.white.withOpacity(.5),
                           ),
                         ),
-                        child: Icon(
-                          Icons.chat,
-                          color: Colors.white.withOpacity(.5),
+                        const Spacer(),
+                        Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: kPrimaryColor,
+                            shape: BoxShape.circle,
+                            border: Border.all(),
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          ),
                         ),
-                      ),
-                      const Spacer(),
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          shape: BoxShape.circle,
-                          border: Border.all(),
-                        ),
-                        child: const Icon(
-                          Icons.arrow_forward,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   )
                 ],
               ),
