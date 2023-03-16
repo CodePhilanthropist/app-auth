@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/constants.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -22,24 +24,48 @@ class LoginScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "SIgn in".toUpperCase(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      Text(
+                        "Sign up".toUpperCase(),
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: kPrimaryColor,
+                        ),
+                      ),
                     ],
                   ),
-                )
-              ],
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(right: 16),
+                        child: Icon(
+                          Icons.alternate_email,
+                          color: kPrimaryColor,
+                        ),
+                      ),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(hintText: "Email"),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ],
