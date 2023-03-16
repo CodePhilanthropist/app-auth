@@ -23,8 +23,17 @@ class MyApp extends StatelessWidget {
           ),
           labelMedium: TextStyle(color: kPrimaryColor),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.white.withOpacity(.1),
+              ),
+            ),
+            focusedBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(color: kPrimaryColor),
+            )),
       ),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
